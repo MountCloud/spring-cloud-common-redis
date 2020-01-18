@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.mountcloud</groupId>
 		<artifactId>spring-cloud-common-parent</artifactId>
-		<version>2.2.1.RELEASE-Hoxton.RELEASE-1.0</version>
+		<version>2.2.1.RELEASE-Hoxton.RELEASE-1.1</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mountcloud</groupId>
 	<artifactId>spring-cloud-common-redis</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<description>This project contains the necessary components and extensions of spring boot redis, as well as cache constraints.</description>
 
@@ -126,5 +126,24 @@
 			</distributionManagement>
 		</profile>
 	</profiles>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.0</version>
+				<!-- 绑定source插件到Maven的生命周期,并在生命周期后执行绑定的source的goal -->
+				<executions>
+					<execution>
+						<!-- 绑定source插件到Maven的生命周期 -->
+						<phase>compile</phase>
+						<!--在生命周期后执行绑定的source插件的goals -->
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
