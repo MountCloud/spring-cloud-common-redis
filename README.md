@@ -21,10 +21,11 @@
 ```
 
 ## Enable cache，启用缓存（spring cache）
-```
 After using spring-cloud-common-redis, redis has been enabled, but the cache is not enabled. That means @Cacheable will not work. If you need to enable the cache, you must use this annotation to enable it.
+
 使用spring-cloud-common-redis后已经启用了redis，但是并未开启缓存（cache）也就是说@Cacheable并不会起作用，如果需要开启cache，则必须使用这个注解来开启.
 
+```
 @EnableRedisCache
 ```
 
