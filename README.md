@@ -46,7 +46,7 @@ spring:
 	redis:                                    #redis 配置
 	  host: 127.0.0.1                         #redis 服务的IP
 	  port: 6379                              #redis 服务的端口号
-	  password:                               #redis 的连接密码,nopassword代表无需设置密码
+	  password:                               #redis 的连接密码,空代表无需设置密码
 	  database: 4                             #redis database编号
 	  pool:                                   #redis 连接池配置
 		max-active: 200                      #redis 连接池 最大活跃连结数
